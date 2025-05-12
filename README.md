@@ -42,13 +42,16 @@
 - ✉️ Email: ngv.chungg@gmail.com
 - 💳 Paypal: [Click](https://paypal.me/vanchungx)
 - ☕ Donate: [Buy Me a Coffee](https://buymeacoffee.com/vanchung)
--   <a href="https://discord.com/users/YourDiscordID">
-    <img src="https://img.shields.io/badge/DiscordBot-Online-brightgreen?logo=discord" alt="Discord Bot Status"/>
+- Discord: <a href="https://discord.com/users/411648657377722370">
+    <img src="https://img.shields.io/badge/DiscordBot-Online-brightgreen?logo=discord" alt="Discord User Status"/>
   </a>
 
 ---
-![Status](https://img.shields.io/badge/DiscordBot-Online-brightgreen)
-![Language](https://img.shields.io/badge/Built%20with-Node.js-yellowgreen)'
+![Node.js Version](https://img.shields.io/badge/Node.js->=16.x-green?logo=node.js)
+![Discord.js Version](https://img.shields.io/badge/Discord.js-v14-blue?logo=discord&logoColor=white)
+![NPM Version](https://img.shields.io/npm/v/your-package-name.svg?logo=npm)
+![Build Status](https://img.shields.io/github/actions/workflow/status/vanchungnguyxn/locket-discord-bot/ci.yml?branch=main)
+
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=vanchungnguyxn&show_icons=true&theme=tokyonight" />
