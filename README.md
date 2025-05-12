@@ -44,6 +44,7 @@
 - ☕ Donate: [Buy Me a Coffee](https://buymeacoffee.com/vanchung)
 
 ---
+![Status](https://img.shields.io/badge/DiscordBot-Online-brightgreen)
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=nguyenvanchung&show_icons=true&theme=tokyonight" />
