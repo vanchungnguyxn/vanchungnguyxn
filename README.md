@@ -42,7 +42,7 @@
 - ✉️ Email: ngv.chungg@gmail.com
 - 💳 Paypal: [Click](https://paypal.me/vanchungx)
 - ☕ Donate: [Buy Me a Coffee](https://buymeacoffee.com/vanchung)
-- Discord: <a href="https://discord.com/users/411648657377722370">
+- Discord:   <a href="https://discord.com/users/411648657377722370">
     <img src="https://img.shields.io/badge/DiscordUser-Online-brightgreen?logo=discord" alt="Discord User Status"/>
   </a>
 
