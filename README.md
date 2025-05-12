@@ -42,6 +42,9 @@
 - ✉️ Email: ngv.chungg@gmail.com
 - 💳 Paypal: [Click](https://paypal.me/vanchungx)
 - ☕ Donate: [Buy Me a Coffee](https://buymeacoffee.com/vanchung)
+-   <a href="https://discord.com/users/YourDiscordID">
+    <img src="https://img.shields.io/badge/DiscordBot-Online-brightgreen?logo=discord" alt="Discord Bot Status"/>
+  </a>
 
 ---
 ![Status](https://img.shields.io/badge/DiscordBot-Online-brightgreen)
