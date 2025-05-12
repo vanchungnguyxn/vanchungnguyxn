@@ -38,16 +38,17 @@
 
 ## 📬 Liên hệ | Support
 
-- 💼 [GitHub](https://github.com/nguyenvanchung8)
+- 💼 [GitHub](https://github.com/vanchungnguyxn)
 - ✉️ Email: ngv.chungg@gmail.com
 - 💳 Paypal: [Click](https://paypal.me/vanchungx)
 - ☕ Donate: [Buy Me a Coffee](https://buymeacoffee.com/vanchung)
 
 ---
 ![Status](https://img.shields.io/badge/DiscordBot-Online-brightgreen)
+![Language](https://img.shields.io/badge/Built%20with-Node.js-yellowgreen)'
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=nguyenvanchung&show_icons=true&theme=tokyonight" />
+  <img src="https://github-readme-stats.vercel.app/api?username=vanchungnguyxn&show_icons=true&theme=tokyonight" />
 </p>
 
 <p align="center">
