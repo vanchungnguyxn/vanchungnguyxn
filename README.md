@@ -43,14 +43,12 @@
 - 💳 Paypal: [Click](https://paypal.me/vanchungx)
 - ☕ Donate: [Buy Me a Coffee](https://buymeacoffee.com/vanchung)
 - Discord: <a href="https://discord.com/users/411648657377722370">
-    <img src="https://img.shields.io/badge/DiscordBot-Online-brightgreen?logo=discord" alt="Discord User Status"/>
+    <img src="https://img.shields.io/badge/DiscordUser-Online-brightgreen?logo=discord" alt="Discord User Status"/>
   </a>
 
 ---
 ![Node.js Version](https://img.shields.io/badge/Node.js->=16.x-green?logo=node.js)
 ![Discord.js Version](https://img.shields.io/badge/Discord.js-v14-blue?logo=discord&logoColor=white)
-![NPM Version](https://img.shields.io/npm/v/your-package-name.svg?logo=npm)
-![Build Status](https://img.shields.io/github/actions/workflow/status/vanchungnguyxn/locket-discord-bot/ci.yml?branch=main)
 
 
 <p align="center">
