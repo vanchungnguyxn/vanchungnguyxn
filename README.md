@@ -1,6 +1,3 @@
-<!-- Banner (thay link nếu bạn muốn ảnh khác, ví dụ Unsplash hoặc tự thiết kế) -->
-![Cyber Security Banner](https://www.springboard.com/blog/wp-content/uploads/2021/06/shutterstock_505066678-scaled-scaled.jpg)
-
 # 👋 Hi, I’m **Nguyen Van Chung**
 
 > 🎓 Cyber Security student • 🛠️ Builder of small but useful tools • Viet Nam 🇻🇳
@@ -43,11 +40,32 @@
 A CLI to build a SHA-256 baseline, watch changes, and generate HTML reports.  
 Quick start: `fim init …` → `fim watch …` → `fim report …`
 
+### File Integrity Monitor Report
+<p align="center">
+  <img src="assets/screenshots/report-summary.png" width="80%">
+</p>
+
+<p align="center">
+  <img src="assets/screenshots/report-chart.png" width="80%">
+  <img src="assets/screenshots/report-table.png" width="80%">
+</p>
+
 ### 📣 [Message Broadcaster (Java)](https://github.com/vanchungnguyxn/message-broadcaster)
 Tiny **UDP/SSE broadcaster** demo to send notifications from GUI/server to web client in real-time.
+### Web Notification Board
+<p align="center">
+  <img src="assets/screenshots/web-connected.png" width="45%">
+  <img src="assets/screenshots/web-message.png" width="45%">
+</p>
+
+### Server GUI
+<p align="center">
+  <img src="assets/screenshots/server-gui.png" width="60%">
+</p>
 
 ### 🤖 [LocketBot Discord](https://github.com/vanchungnguyxn/LocketBot-Discord)
 Discord bot integrating Locket-like flows inside Discord with login, post moments and simple UX.
+
 
 ---
 
