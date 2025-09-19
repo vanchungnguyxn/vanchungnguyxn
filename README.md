@@ -36,7 +36,6 @@
 ## ⭐ Featured Projects
 
 ### 🛡️ [File Integrity Monitor (FIM)](https://github.com/vanchungnguyxn/File-Integrity-Monitor--FIM-)
-[![PyPI](https://img.shields.io/pypi/v/file-integrity-monitor-fim?style=flat-square)](https://pypi.org/project/file-integrity-monitor-fim/)  
 A CLI to build a SHA-256 baseline, watch changes, and generate HTML reports.  
 Quick start: `fim init …` → `fim watch …` → `fim report …`
 
