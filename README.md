@@ -45,11 +45,6 @@ Quick start: `fim init …` → `fim watch …` → `fim report …`
   <img src="assets/screenshots/report-summary.png" width="80%">
 </p>
 
-<p align="center">
-  <img src="assets/screenshots/report-chart.png" width="80%">
-  <img src="assets/screenshots/report-table.png" width="80%">
-</p>
-
 ### 📣 [Message Broadcaster (Java)](https://github.com/vanchungnguyxn/message-broadcaster)
 Tiny **UDP/SSE broadcaster** demo to send notifications from GUI/server to web client in real-time.
 ### Web Notification Board
