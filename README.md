@@ -3,9 +3,9 @@
   Refresh locally: npm run build
 -->
 
-<div align="center">
+<p align="left">
   <img src="https://raw.githubusercontent.com/vanchungnguyxn/vanchungnguyxn/main/assets/brand.png" alt="chung.lab" height="56"/>
-</div>
+</p>
 
 <br/>
 
