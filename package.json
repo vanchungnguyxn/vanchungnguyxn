@@ -3,7 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "render": "node scripts/render-metrics.js"
+    "render": "node scripts/render-metrics.js",
+    "export": "node scripts/export-png.js",
+    "build": "npm run render && npm run export"
   },
   "engines": {
     "node": ">=20"

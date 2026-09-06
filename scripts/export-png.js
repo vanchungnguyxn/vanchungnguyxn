@@ -1,0 +1,159 @@
+import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+import { createRequire } from "node:module";
+
+const require = createRequire(import.meta.url);
+const { Resvg } = require("@resvg/resvg-js");
+
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
+const OUT = join(ROOT, "assets");
+
+const glyphs = "01ABCDEF89#*$%=+/";
+
+function rainColumn(x, opacity, seed) {
+  const spans = [];
+  for (let i = 0; i < 28; i++) {
+    const c = glyphs[(seed * 13 + i * 7) % glyphs.length];
+    const dy = i === 0 ? 0 : 12;
+    const fill = i === 0 ? "#b8b8b8" : i < 3 ? "#6a6a6a" : "#2a2a2a";
+    spans.push(`<tspan x="0" dy="${dy}" fill="${fill}">${c}</tspan>`);
+  }
+  const y = -40 - (seed % 7) * 18;
+  return `<g transform="translate(${x},${y})" opacity="${opacity}"><text font-family="Consolas, Menlo, monospace" font-size="10">${spans.join("")}</text></g>`;
+}
+
+const cols = [
+  [24, 0.55, 1],
+  [64, 0.7, 2],
+  [104, 0.45, 3],
+  [148, 0.8, 4],
+  [192, 0.5, 5],
+  [240, 0.65, 6],
+  [292, 0.4, 7],
+  [348, 0.75, 8],
+  [408, 0.5, 9],
+  [472, 0.35, 10],
+  [540, 0.55, 11],
+  [612, 0.7, 12],
+  [688, 0.45, 13],
+  [760, 0.8, 14],
+  [828, 0.5, 15],
+  [896, 0.65, 16],
+  [960, 0.4, 17],
+  [1024, 0.75, 18],
+  [1088, 0.55, 19],
+  [1152, 0.6, 20],
+]
+  .map((a) => rainColumn(...a))
+  .join("\n");
+
+const headerSvg = `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460">
+  <defs>
+    <radialGradient id="vignette" cx="50%" cy="46%" r="68%">
+      <stop offset="0%" stop-color="#050505" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#050505" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.96"/>
+    </radialGradient>
+    <linearGradient id="nameGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c8c8c8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="460" fill="#030303"/>
+  ${cols}
+  <rect width="1200" height="460" fill="url(#vignette)"/>
+
+  <path d="M28 58 H68 M28 58 V98" fill="none" stroke="#3a3a3a" stroke-width="1.2"/>
+  <path d="M1172 58 H1132 M1172 58 V98" fill="none" stroke="#3a3a3a" stroke-width="1.2"/>
+  <path d="M28 402 H68 M28 402 V362" fill="none" stroke="#3a3a3a" stroke-width="1.2"/>
+  <path d="M1172 402 H1132 M1172 402 V362" fill="none" stroke="#3a3a3a" stroke-width="1.2"/>
+
+  <rect x="18" y="18" width="1164" height="424" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+  <rect x="24" y="24" width="1152" height="412" fill="none" stroke="#101010" stroke-width="1"/>
+
+  <circle cx="48" cy="48" r="3.5" fill="#e8e8e8"/>
+  <text x="62" y="52" fill="#bdbdbd" font-family="Consolas, Menlo, monospace" font-size="11" letter-spacing="0.6">SYS.ONLINE</text>
+  <text x="600" y="52" text-anchor="middle" fill="#7a7a7a" font-family="Consolas, Menlo, monospace" font-size="11" letter-spacing="0.6">[ NODE: CYBER_AI_CORE // ID: 0xA1C0DE ]</text>
+  <text x="1152" y="52" text-anchor="end" fill="#7a7a7a" font-family="Consolas, Menlo, monospace" font-size="11" letter-spacing="0.6">LATENCY 12ms</text>
+
+  <rect x="170" y="130" width="860" height="210" rx="4" fill="#050505" fill-opacity="0.78" stroke="#1f1f1f"/>
+
+  <line x1="220" y1="214" x2="360" y2="214" stroke="#2e2e2e" stroke-width="1"/>
+  <line x1="840" y1="214" x2="980" y2="214" stroke="#2e2e2e" stroke-width="1"/>
+  <circle cx="360" cy="214" r="2" fill="#666666"/>
+  <circle cx="840" cy="214" r="2" fill="#666666"/>
+
+  <text x="600" y="228" text-anchor="middle" fill="url(#nameGlow)" font-family="Segoe UI, Arial, sans-serif" font-size="82" font-weight="800" letter-spacing="10">VAN CHUNG</text>
+  <text x="600" y="268" text-anchor="middle" fill="#cfcfcf" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="4.5">CYBER SECURITY  x  AI SYSTEMS</text>
+
+  <rect x="430" y="286" width="72" height="26" rx="4" fill="#121212" stroke="#3a3a3a"/>
+  <text x="466" y="303" text-anchor="middle" fill="#eaeaea" font-family="Consolas, Menlo, monospace" font-size="11" font-weight="700" letter-spacing="1.5">CYBER</text>
+  <rect x="520" y="286" width="40" height="26" rx="4" fill="#0c0c0c" stroke="#2a2a2a"/>
+  <text x="540" y="303" text-anchor="middle" fill="#888888" font-family="Consolas, Menlo, monospace" font-size="11" font-weight="700">x</text>
+  <rect x="570" y="286" width="56" height="26" rx="4" fill="#121212" stroke="#3a3a3a"/>
+  <text x="598" y="303" text-anchor="middle" fill="#eaeaea" font-family="Consolas, Menlo, monospace" font-size="11" font-weight="700" letter-spacing="1.5">AI</text>
+  <rect x="640" y="286" width="130" height="26" rx="4" fill="#0e0e0e" stroke="#2a2a2a"/>
+  <text x="705" y="303" text-anchor="middle" fill="#9a9a9a" font-family="Consolas, Menlo, monospace" font-size="11" letter-spacing="0.6">BUILDER · VN</text>
+
+  <text x="600" y="350" text-anchor="middle" fill="#7a7a7a" font-family="Consolas, Menlo, monospace" font-size="11" letter-spacing="0.6">[ DEFENSE_TOOLS // RAG_PIPELINES // AGENT_LABS ]</text>
+
+  <text x="48" y="422" fill="#7a7a7a" font-family="Consolas, Menlo, monospace" font-size="11" letter-spacing="0.6">FIM_BASELINE: VERIFIED · SOC_SIGNAL: LIVE</text>
+  <text x="600" y="422" text-anchor="middle" fill="#7a7a7a" font-family="Consolas, Menlo, monospace" font-size="11" letter-spacing="0.6">[ THREAT_VECTOR: MODEL+MESH ]</text>
+  <text x="1152" y="422" text-anchor="end" fill="#7a7a7a" font-family="Consolas, Menlo, monospace" font-size="11" letter-spacing="0.6">INFERENCE: READY · SHA256: VALID</text>
+
+  <g opacity="0.55" stroke="#3f3f3f" fill="none" stroke-width="1">
+    <circle cx="210" cy="180" r="5"/><circle cx="210" cy="235" r="3"/><circle cx="210" cy="290" r="5"/>
+    <path d="M210 185 V230 M210 238 V285"/><path d="M215 180 H245 M215 290 H245"/>
+  </g>
+  <g opacity="0.55" stroke="#3f3f3f" fill="none" stroke-width="1">
+    <circle cx="990" cy="180" r="5"/><circle cx="990" cy="235" r="3"/><circle cx="990" cy="290" r="5"/>
+    <path d="M990 185 V230 M990 238 V285"/><path d="M985 180 H955 M985 290 H955"/>
+  </g>
+</svg>`;
+
+writeFileSync(join(OUT, "header.svg"), headerSvg, "utf8");
+
+const brandSvg = `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="58" viewBox="0 0 340 58">
+  <g fill="none" stroke="#e8e8e8" stroke-width="1.5">
+    <path d="M16 12 L28 6 L40 12 V28 C40 36 28 44 28 44 S16 36 16 28 Z"/>
+    <path d="M23 24h10M28 19v12" stroke-width="1.3"/>
+  </g>
+  <circle cx="52" cy="40" r="2.2" fill="#bbbbbb"/>
+  <circle cx="62" cy="40" r="2.2" fill="#888888"/>
+  <path d="M54 40h6" stroke="#888888" stroke-width="1"/>
+  <text x="74" y="26" fill="#f2f2f2" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" letter-spacing="0.6">chung.lab</text>
+  <text x="74" y="44" fill="#8a8a8a" font-family="Consolas, Menlo, monospace" font-size="11" letter-spacing="1.2">cyber x ai · defense + models</text>
+</svg>`;
+writeFileSync(join(OUT, "brand.svg"), brandSvg, "utf8");
+
+function toPng(svgPath, pngPath, width) {
+  const svg = readFileSync(svgPath);
+  const resvg = new Resvg(svg, {
+    fitTo: { mode: "width", value: width },
+    font: { loadSystemFonts: true },
+  });
+  writeFileSync(pngPath, resvg.render().asPng());
+  console.log("png", pngPath);
+}
+
+mkdirSync(join(OUT, "metrics"), { recursive: true });
+toPng(join(OUT, "header.svg"), join(OUT, "header.png"), 1200);
+toPng(join(OUT, "brand.svg"), join(OUT, "brand.png"), 340);
+
+for (const name of ["overview", "languages", "activity", "contributions"]) {
+  const svgPath = join(OUT, "metrics", `${name}.svg`);
+  // strip CSS animation attrs that confuse some renderers
+  let svg = readFileSync(svgPath, "utf8")
+    .replace(/class="[^"]*"/g, "")
+    .replace(/<style>[\s\S]*?<\/style>/g, "")
+    .replace(/ style="animation-delay:[^"]*"/g, "");
+  const tmp = join(OUT, "metrics", `_${name}.svg`);
+  writeFileSync(tmp, svg);
+  toPng(tmp, join(OUT, "metrics", `${name}.png`), name === "contributions" ? 802 : 400);
+}
+
+console.log("done");

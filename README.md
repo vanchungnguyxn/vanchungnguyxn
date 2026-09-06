@@ -1,11 +1,16 @@
+<!--
+  Profile assets are static PNGs (no GitHub Actions).
+  Refresh locally: npm run build
+-->
+
 <div align="center">
-  <img src="./assets/brand.svg" alt="chung.lab" height="56"/>
+  <img src="https://raw.githubusercontent.com/vanchungnguyxn/vanchungnguyxn/main/assets/brand.png" alt="chung.lab" height="56"/>
 </div>
 
 <br/>
 
 <div align="center">
-  <img src="./assets/header.svg" alt="Van Chung" width="100%"/>
+  <img src="https://raw.githubusercontent.com/vanchungnguyxn/vanchungnguyxn/main/assets/header.png" alt="Van Chung — Cyber x AI" width="100%"/>
 </div>
 
 <br/>
@@ -29,33 +34,30 @@
 
 <div align="center">
   <h3>✦ Cyber × AI Focus</h3>
-  <p>
-    Where security engineering intersects with models, agents, and retrieval systems.
-  </p>
 </div>
 
 <table>
   <tr>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/vanchungnguyxn/SecuWeave">SecuWeave</a></h3>
-      <p>Hybrid <b>SAST + explain / fix</b> — security scanning with LLM-assisted remediation, wired into GitHub Actions CI.</p>
+      <p>Hybrid <b>SAST + explain / fix</b> — LLM-assisted remediation in GitHub Actions CI.</p>
       <code>AI · SAST · CI/CD</code>
     </td>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/vanchungnguyxn/k8s-rag-observability">k8s-rag-observability</a></h3>
-      <p>RAG pipeline on Kubernetes with observability hooks — retrieval, serving, and ops visibility for AI workloads.</p>
+      <p>RAG on Kubernetes with observability — retrieval, serving, ops visibility.</p>
       <code>RAG · K8s · Observability</code>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/vanchungnguyxn/pdf-scan-toolkit">PDF Scan Toolkit</a></h3>
-      <p>Document ingestion toolkit for <b>Clinical RAG</b> demos — scan, parse, and feed PDFs into retrieval flows.</p>
+      <p>Document ingestion for <b>Clinical RAG</b> — scan, parse, feed retrieval flows.</p>
       <code>RAG · NLP · Python</code>
     </td>
     <td width="50%" valign="top">
       <h3><a href="https://github.com/vanchungnguyxn/Day04-E403-Prompt-Engineering-Tool-Calling-Labs">Prompt &amp; Tool-Calling Labs</a></h3>
-      <p>Hands-on labs for prompt engineering and tool calling — building blocks for agentic / AI product work.</p>
+      <p>Prompt engineering and tool calling — building blocks for agentic AI work.</p>
       <code>Agents · Prompting · Tools</code>
     </td>
   </tr>
@@ -76,25 +78,19 @@
     <td colspan="2" align="center">
       <h3><a href="https://github.com/vanchungnguyxn/blue-team-toolkits">Blue-Team Toolkit</a></h3>
       <p>Live packet capture · threat detection · Slack / Telegram alerts</p>
-      <a href="https://github.com/vanchungnguyxn/blue-team-toolkits">
-        <img src="https://raw.githubusercontent.com/vanchungnguyxn/blue-team-toolkits/main/assets/screenshots/bluetool-dashboard.png" width="92%" alt="Blue-Team Toolkit"/>
-      </a>
+      <img src="https://raw.githubusercontent.com/vanchungnguyxn/blue-team-toolkits/main/assets/screenshots/bluetool-dashboard.png" width="92%" alt="Blue-Team Toolkit dashboard"/>
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
       <h3><a href="https://github.com/vanchungnguyxn/File-Integrity-Monitor--FIM-">File Integrity Monitor</a></h3>
       <p>SHA-256 baseline · watch mode · HTML reports</p>
-      <a href="https://github.com/vanchungnguyxn/File-Integrity-Monitor--FIM-">
-        <img src="https://raw.githubusercontent.com/vanchungnguyxn/File-Integrity-Monitor--FIM-/main/docs/images/report-summary.png" width="100%" alt="FIM"/>
-      </a>
+      <img src="https://raw.githubusercontent.com/vanchungnguyxn/File-Integrity-Monitor--FIM-/main/docs/images/report-summary.png" width="100%" alt="FIM report"/>
     </td>
     <td width="50%" align="center" valign="top">
       <h3><a href="https://github.com/vanchungnguyxn/message-broadcaster">Message Broadcaster</a></h3>
       <p>Java UDP / SSE · GUI server → web client</p>
-      <a href="https://github.com/vanchungnguyxn/message-broadcaster">
-        <img src="https://raw.githubusercontent.com/vanchungnguyxn/message-broadcaster/main/assets/screenshots/web-connected.png" width="100%" alt="Broadcaster"/>
-      </a>
+      <img src="https://raw.githubusercontent.com/vanchungnguyxn/message-broadcaster/main/assets/screenshots/web-connected.png" width="100%" alt="Message Broadcaster"/>
     </td>
   </tr>
 </table>
@@ -107,27 +103,35 @@
 
 <div align="center">
   <h3>✦ Metrics</h3>
-  <img src="./assets/metrics/overview.svg" height="230" alt="Overview"/>
-  <img src="./assets/metrics/languages.svg" height="230" alt="Languages"/>
-  <img src="./assets/metrics/activity.svg" height="230" alt="Activity"/>
+  <img src="https://raw.githubusercontent.com/vanchungnguyxn/vanchungnguyxn/main/assets/metrics/overview.png" height="230" alt="Live metrics"/>
+  <img src="https://raw.githubusercontent.com/vanchungnguyxn/vanchungnguyxn/main/assets/metrics/languages.png" height="230" alt="Top languages"/>
+  <img src="https://raw.githubusercontent.com/vanchungnguyxn/vanchungnguyxn/main/assets/metrics/activity.png" height="230" alt="Activity pulse"/>
 </div>
 
 <br/>
 
 <div align="center">
   <h3>✦ Stack</h3>
-  <img src="https://skillicons.dev/icons?i=python,java,js,ts,docker,kubernetes,githubactions,linux,bash,git&theme=dark" alt="Stack"/>
-  <br/><br/>
-  <code>Cyber</code> blue-team · FIM · packet capture · CI security
-  &nbsp;·&nbsp;
-  <code>AI</code> RAG · agents · prompt / tool-calling · SAST+LLM
+  <p>
+    <img src="https://img.shields.io/badge/Python-111111?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+    <img src="https://img.shields.io/badge/Java-111111?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java"/>
+    <img src="https://img.shields.io/badge/TypeScript-111111?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
+    <img src="https://img.shields.io/badge/Docker-111111?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
+    <img src="https://img.shields.io/badge/Kubernetes-111111?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes"/>
+    <img src="https://img.shields.io/badge/Linux-111111?style=for-the-badge&logo=linux&logoColor=white" alt="Linux"/>
+  </p>
+  <p>
+    <code>Cyber</code> blue-team · FIM · packet capture
+    &nbsp;·&nbsp;
+    <code>AI</code> RAG · agents · prompt / tool-calling · SAST+LLM
+  </p>
 </div>
 
 <br/>
 
 <div align="center">
   <h3>✦ Contributions</h3>
-  <img src="./assets/metrics/contributions.svg" width="100%" alt="Contribution graph"/>
+  <img src="https://raw.githubusercontent.com/vanchungnguyxn/vanchungnguyxn/main/assets/metrics/contributions.png" width="100%" alt="Contribution graph"/>
 </div>
 
 <br/>
