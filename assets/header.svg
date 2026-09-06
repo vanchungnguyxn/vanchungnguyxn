@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" role="img" aria-label="Nguyen Van Chung  Cyber Security Portfolio">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#070d18">
+        <animate attributeName="stop-color" values="#070d18;#0a1628;#070d18" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="55%" stop-color="#0d1b2a"/>
+      <stop offset="100%" stop-color="#102a43">
+        <animate attributeName="stop-color" values="#102a43;#12324f;#102a43" dur="8s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2dd4bf" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity=".85"/>
+      <stop offset="100%" stop-color="#2dd4bf" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e8f4ff"/>
+      <stop offset="100%" stop-color="#2dd4bf"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1d2b44" stroke-width="1"/>
+    </pattern>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="280" fill="url(#bg)"/>
+  <rect width="1200" height="280" fill="url(#grid)" opacity=".45"/>
+
+  <!-- sweeping scan beam -->
+  <rect x="-220" y="0" width="220" height="280" fill="url(#beam)" opacity=".35">
+    <animate attributeName="x" from="-220" to="1200" dur="5.5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- floating orbs -->
+  <circle cx="980" cy="70" r="56" fill="#2dd4bf" opacity=".08">
+    <animate attributeName="cy" values="70;95;70" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1080" cy="180" r="90" fill="#38bdf8" opacity=".07">
+    <animate attributeName="cy" values="180;150;180" dur="7s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- left accent bar -->
+  <rect x="0" y="0" width="8" height="280" fill="#2dd4bf"/>
+  <rect x="8" y="0" width="2" height="280" fill="#38bdf8" opacity=".5">
+    <animate attributeName="opacity" values=".2;.8;.2" dur="2.4s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- status chip -->
+  <g transform="translate(56,42)">
+    <rect width="168" height="28" rx="14" fill="#122033" stroke="#1f334f"/>
+    <circle cx="18" cy="14" r="5" fill="#2dd4bf">
+      <animate attributeName="opacity" values="1;.35;1" dur="1.6s" repeatCount="indefinite"/>
+    </circle>
+    <text x="34" y="18" fill="#9fb4d0" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12" font-weight="600">SYSTEM ONLINE</text>
+  </g>
+
+  <text x="56" y="120" fill="url(#textGrad)" font-family="Segoe UI, Ubuntu, sans-serif" font-size="42" font-weight="800" filter="url(#glow)">
+    Nguyen Van Chung
+  </text>
+  <text x="56" y="158" fill="#9fb4d0" font-family="Segoe UI, Ubuntu, sans-serif" font-size="18" font-weight="500">
+    Cyber Security Student · Blue-team builder · Automation
+  </text>
+
+  <!-- tags -->
+  <g font-family="Segoe UI, Ubuntu, sans-serif" font-size="13" font-weight="600">
+    <g transform="translate(56,190)">
+      <rect width="118" height="30" rx="8" fill="#122033" stroke="#1f334f"/>
+      <text x="59" y="20" text-anchor="middle" fill="#2dd4bf">Defensive Sec</text>
+    </g>
+    <g transform="translate(186,190)">
+      <rect width="108" height="30" rx="8" fill="#122033" stroke="#1f334f"/>
+      <text x="54" y="20" text-anchor="middle" fill="#38bdf8">Python / Java</text>
+    </g>
+    <g transform="translate(306,190)">
+      <rect width="92" height="30" rx="8" fill="#122033" stroke="#1f334f"/>
+      <text x="46" y="20" text-anchor="middle" fill="#fbbf24">Viet Nam</text>
+    </g>
+  </g>
+
+  <!-- terminal cursor block -->
+  <g transform="translate(56,236)" font-family="Consolas, Monaco, monospace" font-size="14">
+    <text fill="#5f7a99">~/portfolio</text>
+    <text x="108" fill="#2dd4bf">$</text>
+    <text x="124" fill="#cfe7ff">building security tools</text>
+    <rect x="318" y="-11" width="9" height="16" fill="#2dd4bf">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>

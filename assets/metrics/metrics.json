@@ -1,0 +1,49 @@
+{
+  "name": "Nguyen Chung",
+  "login": "vanchungnguyxn",
+  "createdAt": "2024-02-07T16:01:38Z",
+  "followers": 0,
+  "following": 1,
+  "publicRepos": 25,
+  "stars": 2,
+  "forks": 0,
+  "contributions": 222,
+  "commits": 107,
+  "prs": 6,
+  "issues": 0,
+  "reviews": 0,
+  "mergedPrs": 9,
+  "languages": [
+    {
+      "name": "TypeScript",
+      "size": 4974253,
+      "pct": 47
+    },
+    {
+      "name": "JavaScript",
+      "size": 2893000,
+      "pct": 27
+    },
+    {
+      "name": "Python",
+      "size": 1663038,
+      "pct": 16
+    },
+    {
+      "name": "CSS",
+      "size": 410286,
+      "pct": 4
+    },
+    {
+      "name": "HTML",
+      "size": 382732,
+      "pct": 4
+    },
+    {
+      "name": "PLpgSQL",
+      "size": 230628,
+      "pct": 2
+    }
+  ],
+  "updatedAt": "2026-09-06T06:00:54.433Z"
+}

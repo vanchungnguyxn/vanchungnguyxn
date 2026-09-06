@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="60" viewBox="0 0 1200 60" role="img" aria-label="section border">
+  <defs>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2dd4bf" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#2dd4bf"/>
+      <stop offset="65%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <line x1="40" y1="30" x2="1160" y2="30" stroke="url(#line)" stroke-width="1.5"/>
+  <circle cx="600" cy="30" r="4" fill="#2dd4bf">
+    <animate attributeName="r" values="3;6;3" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values=".5;1;.5" dur="2s" repeatCount="indefinite"/>
+  </circle>
+</svg>

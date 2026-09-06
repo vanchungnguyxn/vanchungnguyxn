@@ -1,0 +1,11 @@
+{
+  "name": "vanchungnguyxn-profile",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "render": "node scripts/render-metrics.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
