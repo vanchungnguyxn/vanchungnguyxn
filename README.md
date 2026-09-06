@@ -16,6 +16,14 @@
 <br/>
 
 <div align="center">
+  <a href="https://github.com/vanchungnguyxn">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=18&duration=2800&pause=1000&color=C8C8C8&center=true&vCenter=true&width=720&height=40&lines=Cyber+Security+x+AI+Systems;Blue-team+tooling+%7C+RAG+%7C+Agent+labs;Defense_tools+%2F%2F+Inference_ready" alt="typing"/>
+  </a>
+</div>
+
+<br/>
+
+<div align="center">
   <b>Cyber Security × AI</b> · Builder of
   <a href="https://github.com/vanchungnguyxn/blue-team-toolkits">Blue-Team Toolkit</a>,
   <a href="https://github.com/vanchungnguyxn/SecuWeave">SecuWeave</a> &amp;
@@ -103,9 +111,10 @@
 
 <div align="center">
   <h3>✦ Metrics</h3>
-  <img src="https://raw.githubusercontent.com/vanchungnguyxn/vanchungnguyxn/main/assets/metrics/overview.png" height="230" alt="Live metrics"/>
-  <img src="https://raw.githubusercontent.com/vanchungnguyxn/vanchungnguyxn/main/assets/metrics/languages.png" height="230" alt="Top languages"/>
-  <img src="https://raw.githubusercontent.com/vanchungnguyxn/vanchungnguyxn/main/assets/metrics/activity.png" height="230" alt="Activity pulse"/>
+  <img height="180" src="https://github-readme-stats.vercel.app/api?username=vanchungnguyxn&show_icons=true&theme=dark&hide_border=true&bg_color=030303&title_color=e8e8e8&icon_color=c8c8c8&text_color=a0a0a0&ring_color=e8e8e8" alt="GitHub stats"/>
+  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=vanchungnguyxn&layout=compact&theme=dark&hide_border=true&bg_color=030303&title_color=e8e8e8&text_color=a0a0a0" alt="Top languages"/>
+  <br/>
+  <img height="160" src="https://streak-stats.demolab.com?user=vanchungnguyxn&theme=dark&hide_border=true&background=030303&ring=e8e8e8&fire=c8c8c8&currStreakLabel=e8e8e8" alt="GitHub streak"/>
 </div>
 
 <br/>
@@ -131,7 +140,7 @@
 
 <div align="center">
   <h3>✦ Contributions</h3>
-  <img src="https://raw.githubusercontent.com/vanchungnguyxn/vanchungnguyxn/main/assets/metrics/contributions.png" width="100%" alt="Contribution graph"/>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=vanchungnguyxn&bg_color=030303&color=a0a0a0&line=e8e8e8&point=c8c8c8&area=true&hide_border=true" width="100%" alt="Contribution activity graph"/>
 </div>
 
 <br/>
