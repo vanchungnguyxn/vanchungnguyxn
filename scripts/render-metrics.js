@@ -16,15 +16,15 @@ const USERNAME = process.env.GITHUB_USERNAME || "vanchungnguyxn";
 const TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || "";
 
 const THEME = {
-  bg: "#0b1220",
-  panel: "#111827",
-  border: "#1f2a3d",
-  text: "#e5eefc",
-  muted: "#8b9bb4",
-  accent: "#2dd4bf",
-  accent2: "#38bdf8",
-  warn: "#fbbf24",
-  grid: "#162033",
+  bg: "#050505",
+  panel: "#111111",
+  border: "#222222",
+  text: "#f0f0f0",
+  muted: "#888888",
+  accent: "#e8e8e8",
+  accent2: "#c0c0c0",
+  warn: "#f5f5f5",
+  grid: "#141414",
 };
 
 const LANG_COLORS = {
@@ -119,7 +119,17 @@ async function fetchMetrics() {
           }
         }
         contributionsCollection {
-          contributionCalendar { totalContributions }
+          contributionCalendar {
+            totalContributions
+            weeks {
+              contributionDays {
+                contributionCount
+                color
+                date
+                weekday
+              }
+            }
+          }
           totalCommitContributions
           totalPullRequestContributions
           totalIssueContributions
@@ -165,6 +175,7 @@ async function fetchMetrics() {
     stars,
     forks,
     contributions: c.contributionCalendar.totalContributions,
+    weeks: c.contributionCalendar.weeks,
     commits: c.totalCommitContributions,
     prs: c.totalPullRequestContributions,
     issues: c.totalIssueContributions,
@@ -184,7 +195,7 @@ function cardShell({ width, height, title, children }) {
   <defs>
     <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="${THEME.bg}"/>
-      <stop offset="100%" stop-color="#0a1628"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
     </linearGradient>
     <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="${THEME.accent}"/>
@@ -319,16 +330,89 @@ function renderActivity(m) {
   });
 }
 
+function levelColor(count) {
+  if (count <= 0) return "#161616";
+  if (count === 1) return "#2f2f2f";
+  if (count <= 3) return "#525252";
+  if (count <= 6) return "#8a8a8a";
+  return "#e8e8e8";
+}
+
+function renderContributions(m) {
+  const weeks = m.weeks || [];
+  const cell = 11;
+  const gap = 3;
+  const left = 36;
+  const top = 52;
+  const width = left + weeks.length * (cell + gap) + 24;
+  const height = 168;
+
+  const cells = weeks
+    .map((week, wi) =>
+      week.contributionDays
+        .map((day) => {
+          const x = left + wi * (cell + gap);
+          const y = top + day.weekday * (cell + gap);
+          const fill = levelColor(day.contributionCount);
+          const delay = ((wi * 7 + day.weekday) % 40) * 0.03;
+          return `<rect class="cell" x="${x}" y="${y}" width="${cell}" height="${cell}" rx="2" fill="${fill}" data-date="${escapeXml(day.date)}" style="animation-delay:${delay}s"><title>${escapeXml(day.date)}: ${day.contributionCount}</title></rect>`;
+        })
+        .join(""),
+    )
+    .join("");
+
+  const labels = ["Mon", "Wed", "Fri"]
+    .map((label, i) => {
+      const y = top + [1, 3, 5][i] * (cell + gap) + 9;
+      return `<text x="10" y="${y}" class="small">${label}</text>`;
+    })
+    .join("");
+
+  const legend = [0, 1, 3, 6, 8]
+    .map((n, i) => {
+      const x = width - 24 - (5 - i) * (cell + gap);
+      return `<rect x="${x}" y="${height - 22}" width="${cell}" height="${cell}" rx="2" fill="${levelColor(n)}"/>`;
+    })
+    .join("");
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="Contribution graph">
+  <defs>
+    <style>
+      .title { font: 700 16px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${THEME.text}; }
+      .small { font: 500 10px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${THEME.muted}; }
+      .cell { animation: pop .45s ease-out both; }
+      @keyframes pop { from { opacity: 0 } to { opacity: 1 } }
+      .pulse { animation: pulse 2.4s ease-in-out infinite; }
+      @keyframes pulse { 0%,100% { opacity: .55 } 50% { opacity: 1 } }
+    </style>
+  </defs>
+  <rect width="${width}" height="${height}" rx="14" fill="${THEME.bg}" stroke="${THEME.border}" stroke-width="1"/>
+  <rect x="0" y="0" width="6" height="${height}" rx="3" fill="${THEME.accent}"/>
+  <circle cx="${width - 18}" cy="18" r="4" class="pulse" fill="${THEME.accent}"/>
+  <text x="22" y="28" class="title">Contributions · ${m.contributions} this year</text>
+  ${labels}
+  ${cells}
+  <text x="${width - 118}" y="${height - 12}" class="small" text-anchor="end">Less</text>
+  ${legend}
+  <text x="${width - 14}" y="${height - 12}" class="small" text-anchor="end">More</text>
+</svg>`;
+}
+
 async function main() {
   console.log(`Rendering metrics for @${USERNAME}...`);
   const metrics = await fetchMetrics();
   await mkdir(OUT_DIR, { recursive: true });
 
+  const json = { ...metrics };
+  delete json.weeks;
+
   const files = {
     "overview.svg": renderOverview(metrics),
     "languages.svg": renderLanguages(metrics),
     "activity.svg": renderActivity(metrics),
-    "metrics.json": JSON.stringify(metrics, null, 2) + "\n",
+    "contributions.svg": renderContributions(metrics),
+    "metrics.json": JSON.stringify(json, null, 2) + "\n",
   };
 
   for (const [name, content] of Object.entries(files)) {

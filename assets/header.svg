@@ -1,96 +1,259 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" role="img" aria-label="Nguyen Van Chung  Cyber Security Portfolio">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460" role="img" aria-label="Van Chung - Cyber x AI">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#070d18">
-        <animate attributeName="stop-color" values="#070d18;#0a1628;#070d18" dur="8s" repeatCount="indefinite"/>
-      </stop>
-      <stop offset="55%" stop-color="#0d1b2a"/>
-      <stop offset="100%" stop-color="#102a43">
-        <animate attributeName="stop-color" values="#102a43;#12324f;#102a43" dur="8s" repeatCount="indefinite"/>
-      </stop>
+    <style>
+      .col {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 10px;
+        fill: #2a2a2a;
+      }
+      .meta {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 11px;
+        fill: #7a7a7a;
+        letter-spacing: 0.6px;
+      }
+      .meta-hi {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 11px;
+        fill: #bdbdbd;
+        letter-spacing: 0.6px;
+      }
+      .name {
+        font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+        font-size: 82px;
+        font-weight: 800;
+        fill: #f7f7f7;
+        letter-spacing: 10px;
+      }
+      .role {
+        font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        fill: #cfcfcf;
+        letter-spacing: 4.5px;
+      }
+      .chip {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 11px;
+        font-weight: 700;
+        fill: #eaeaea;
+        letter-spacing: 1.5px;
+      }
+      .hud {
+        fill: none;
+        stroke: #3a3a3a;
+        stroke-width: 1.2;
+      }
+      .line {
+        stroke: #2e2e2e;
+        stroke-width: 1;
+      }
+    </style>
+    <radialGradient id="vignette" cx="50%" cy="46%" r="68%">
+      <stop offset="0%" stop-color="#050505" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#050505" stop-opacity=".25"/>
+      <stop offset="100%" stop-color="#000" stop-opacity=".96"/>
+    </radialGradient>
+    <linearGradient id="nameGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c8c8c8"/>
     </linearGradient>
-    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#2dd4bf" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#38bdf8" stop-opacity=".85"/>
-      <stop offset="100%" stop-color="#2dd4bf" stop-opacity="0"/>
+    <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#fff" stop-opacity=".05"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="textGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#e8f4ff"/>
-      <stop offset="100%" stop-color="#2dd4bf"/>
-    </linearGradient>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1d2b44" stroke-width="1"/>
-    </pattern>
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="4" result="b"/>
-      <feMerge>
-        <feMergeNode in="b"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="0.6"/>
     </filter>
   </defs>
 
-  <rect width="1200" height="280" fill="url(#bg)"/>
-  <rect width="1200" height="280" fill="url(#grid)" opacity=".45"/>
+  <rect width="1200" height="460" fill="#030303"/>
 
-  <!-- sweeping scan beam -->
-  <rect x="-220" y="0" width="220" height="280" fill="url(#beam)" opacity=".35">
-    <animate attributeName="x" from="-220" to="1200" dur="5.5s" repeatCount="indefinite"/>
-  </rect>
+  <!-- matrix field -->
+  <g>
+    <g transform="translate(24,0)" opacity="0.55">
+      <text class="col" y="-240"><tspan x="0" dy="0" fill="#d0d0d0">%</tspan><tspan x="0" dy="12" fill="#8a8a8a">1</tspan><tspan x="0" dy="12" fill="#8a8a8a">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan>
+        <animate attributeName="y" values="-360;520" dur="13s" begin="0s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g transform="translate(64,0)" opacity="0.7">
+      <text class="col" y="-240"><tspan x="0" dy="0" fill="#d0d0d0">F</tspan><tspan x="0" dy="12" fill="#8a8a8a">=</tspan><tspan x="0" dy="12" fill="#8a8a8a">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan>
+        <animate attributeName="y" values="-360;520" dur="15.5s" begin="0.8s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g transform="translate(104,0)" opacity="0.45">
+      <text class="col" y="-240"><tspan x="0" dy="0" fill="#d0d0d0">1</tspan><tspan x="0" dy="12" fill="#8a8a8a">8</tspan><tspan x="0" dy="12" fill="#8a8a8a">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan>
+        <animate attributeName="y" values="-360;520" dur="11s" begin="1.6s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g transform="translate(148,0)" opacity="0.8">
+      <text class="col" y="-240"><tspan x="0" dy="0" fill="#d0d0d0">=</tspan><tspan x="0" dy="12" fill="#8a8a8a">A</tspan><tspan x="0" dy="12" fill="#8a8a8a">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan>
+        <animate attributeName="y" values="-360;520" dur="14s" begin="0.3s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g transform="translate(192,0)" opacity="0.5">
+      <text class="col" y="-240"><tspan x="0" dy="0" fill="#d0d0d0">8</tspan><tspan x="0" dy="12" fill="#8a8a8a">+</tspan><tspan x="0" dy="12" fill="#8a8a8a">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan>
+        <animate attributeName="y" values="-360;520" dur="16s" begin="2.1s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g transform="translate(240,0)" opacity="0.65">
+      <text class="col" y="-240"><tspan x="0" dy="0" fill="#d0d0d0">A</tspan><tspan x="0" dy="12" fill="#8a8a8a">9</tspan><tspan x="0" dy="12" fill="#8a8a8a"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan>
+        <animate attributeName="y" values="-360;520" dur="12.5s" begin="1.1s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g transform="translate(292,0)" opacity="0.4">
+      <text class="col" y="-240"><tspan x="0" dy="0" fill="#d0d0d0">+</tspan><tspan x="0" dy="12" fill="#8a8a8a">B</tspan><tspan x="0" dy="12" fill="#8a8a8a">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan>
+        <animate attributeName="y" values="-360;520" dur="17s" begin="2.8s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g transform="translate(348,0)" opacity="0.75">
+      <text class="col" y="-240"><tspan x="0" dy="0" fill="#d0d0d0">9</tspan><tspan x="0" dy="12" fill="#8a8a8a"><</tspan><tspan x="0" dy="12" fill="#8a8a8a">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan>
+        <animate attributeName="y" values="-360;520" dur="13.5s" begin="0.5s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g transform="translate(408,0)" opacity="0.5">
+      <text class="col" y="-240"><tspan x="0" dy="0" fill="#d0d0d0">B</tspan><tspan x="0" dy="12" fill="#8a8a8a">#</tspan><tspan x="0" dy="12" fill="#8a8a8a">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan>
+        <animate attributeName="y" values="-360;520" dur="15s" begin="1.9s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g transform="translate(472,0)" opacity="0.35">
+      <text class="col" y="-240"><tspan x="0" dy="0" fill="#d0d0d0"><</tspan><tspan x="0" dy="12" fill="#8a8a8a">C</tspan><tspan x="0" dy="12" fill="#8a8a8a">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan>
+        <animate attributeName="y" values="-360;520" dur="18s" begin="0.2s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g transform="translate(540,0)" opacity="0.55">
+      <text class="col" y="-240"><tspan x="0" dy="0" fill="#d0d0d0">#</tspan><tspan x="0" dy="12" fill="#8a8a8a">></tspan><tspan x="0" dy="12" fill="#8a8a8a">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan>
+        <animate attributeName="y" values="-360;520" dur="12s" begin="2.4s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g transform="translate(612,0)" opacity="0.7">
+      <text class="col" y="-240"><tspan x="0" dy="0" fill="#d0d0d0">C</tspan><tspan x="0" dy="12" fill="#8a8a8a">*</tspan><tspan x="0" dy="12" fill="#8a8a8a">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan>
+        <animate attributeName="y" values="-360;520" dur="14.5s" begin="1.3s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g transform="translate(688,0)" opacity="0.45">
+      <text class="col" y="-240"><tspan x="0" dy="0" fill="#d0d0d0">></tspan><tspan x="0" dy="12" fill="#8a8a8a">D</tspan><tspan x="0" dy="12" fill="#8a8a8a">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan>
+        <animate attributeName="y" values="-360;520" dur="16.5s" begin="0.7s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g transform="translate(760,0)" opacity="0.8">
+      <text class="col" y="-240"><tspan x="0" dy="0" fill="#d0d0d0">*</tspan><tspan x="0" dy="12" fill="#8a8a8a">/</tspan><tspan x="0" dy="12" fill="#8a8a8a">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan>
+        <animate attributeName="y" values="-360;520" dur="11.5s" begin="2s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g transform="translate(828,0)" opacity="0.5">
+      <text class="col" y="-240"><tspan x="0" dy="0" fill="#d0d0d0">D</tspan><tspan x="0" dy="12" fill="#8a8a8a">$</tspan><tspan x="0" dy="12" fill="#8a8a8a">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan>
+        <animate attributeName="y" values="-360;520" dur="15s" begin="1.5s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g transform="translate(896,0)" opacity="0.65">
+      <text class="col" y="-240"><tspan x="0" dy="0" fill="#d0d0d0">/</tspan><tspan x="0" dy="12" fill="#8a8a8a">E</tspan><tspan x="0" dy="12" fill="#8a8a8a">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan>
+        <animate attributeName="y" values="-360;520" dur="13s" begin="0.4s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g transform="translate(960,0)" opacity="0.4">
+      <text class="col" y="-240"><tspan x="0" dy="0" fill="#d0d0d0">$</tspan><tspan x="0" dy="12" fill="#8a8a8a">0</tspan><tspan x="0" dy="12" fill="#8a8a8a">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan>
+        <animate attributeName="y" values="-360;520" dur="17.5s" begin="2.6s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g transform="translate(1024,0)" opacity="0.75">
+      <text class="col" y="-240"><tspan x="0" dy="0" fill="#d0d0d0">E</tspan><tspan x="0" dy="12" fill="#8a8a8a">%</tspan><tspan x="0" dy="12" fill="#8a8a8a">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan>
+        <animate attributeName="y" values="-360;520" dur="12s" begin="1s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g transform="translate(1088,0)" opacity="0.55">
+      <text class="col" y="-240"><tspan x="0" dy="0" fill="#d0d0d0">0</tspan><tspan x="0" dy="12" fill="#8a8a8a">F</tspan><tspan x="0" dy="12" fill="#8a8a8a">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan>
+        <animate attributeName="y" values="-360;520" dur="14s" begin="1.8s" repeatCount="indefinite"/>
+      </text>
+    </g>
+    <g transform="translate(1152,0)" opacity="0.6">
+      <text class="col" y="-240"><tspan x="0" dy="0" fill="#d0d0d0">%</tspan><tspan x="0" dy="12" fill="#8a8a8a">1</tspan><tspan x="0" dy="12" fill="#8a8a8a">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan><tspan x="0" dy="12">C</tspan><tspan x="0" dy="12">*</tspan><tspan x="0" dy="12">/</tspan><tspan x="0" dy="12">E</tspan><tspan x="0" dy="12">%</tspan><tspan x="0" dy="12">1</tspan><tspan x="0" dy="12">8</tspan><tspan x="0" dy="12">+</tspan><tspan x="0" dy="12">B</tspan><tspan x="0" dy="12">#</tspan><tspan x="0" dy="12">></tspan><tspan x="0" dy="12">D</tspan><tspan x="0" dy="12">$</tspan><tspan x="0" dy="12">0</tspan><tspan x="0" dy="12">F</tspan><tspan x="0" dy="12">=</tspan><tspan x="0" dy="12">A</tspan><tspan x="0" dy="12">9</tspan><tspan x="0" dy="12"><</tspan>
+        <animate attributeName="y" values="-360;520" dur="16s" begin="0.6s" repeatCount="indefinite"/>
+      </text>
+    </g>
+  </g>
 
-  <!-- floating orbs -->
-  <circle cx="980" cy="70" r="56" fill="#2dd4bf" opacity=".08">
-    <animate attributeName="cy" values="70;95;70" dur="6s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="1080" cy="180" r="90" fill="#38bdf8" opacity=".07">
-    <animate attributeName="cy" values="180;150;180" dur="7s" repeatCount="indefinite"/>
-  </circle>
+  <rect width="1200" height="460" fill="url(#vignette)"/>
 
-  <!-- left accent bar -->
-  <rect x="0" y="0" width="8" height="280" fill="#2dd4bf"/>
-  <rect x="8" y="0" width="2" height="280" fill="#38bdf8" opacity=".5">
-    <animate attributeName="opacity" values=".2;.8;.2" dur="2.4s" repeatCount="indefinite"/>
-  </rect>
+  <!-- HUD corners -->
+  <path class="hud" d="M28 58 H68 M28 58 V98"/>
+  <path class="hud" d="M1172 58 H1132 M1172 58 V98"/>
+  <path class="hud" d="M28 402 H68 M28 402 V362"/>
+  <path class="hud" d="M1172 402 H1132 M1172 402 V362"/>
 
-  <!-- status chip -->
-  <g transform="translate(56,42)">
-    <rect width="168" height="28" rx="14" fill="#122033" stroke="#1f334f"/>
-    <circle cx="18" cy="14" r="5" fill="#2dd4bf">
-      <animate attributeName="opacity" values="1;.35;1" dur="1.6s" repeatCount="indefinite"/>
+  <!-- outer frame -->
+  <rect x="18" y="18" width="1164" height="424" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+  <rect x="24" y="24" width="1152" height="412" fill="none" stroke="#101010" stroke-width="1"/>
+
+  <!-- status bar top -->
+  <g>
+    <circle cx="48" cy="48" r="3.5" fill="#e8e8e8">
+      <animate attributeName="opacity" values="1;0.25;1" dur="1.8s" repeatCount="indefinite"/>
     </circle>
-    <text x="34" y="18" fill="#9fb4d0" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12" font-weight="600">SYSTEM ONLINE</text>
+    <text class="meta-hi" x="62" y="52">SYS.ONLINE</text>
+    <text class="meta" x="600" y="52" text-anchor="middle">[ NODE: CYBER_AI_CORE // ID: 0xA1C0DE ]</text>
+    <text class="meta" x="1152" y="52" text-anchor="end">LATENCY 12ms</text>
   </g>
 
-  <text x="56" y="120" fill="url(#textGrad)" font-family="Segoe UI, Ubuntu, sans-serif" font-size="42" font-weight="800" filter="url(#glow)">
-    Nguyen Van Chung
-  </text>
-  <text x="56" y="158" fill="#9fb4d0" font-family="Segoe UI, Ubuntu, sans-serif" font-size="18" font-weight="500">
-    Cyber Security Student � Blue-team builder � Automation
-  </text>
+  <!-- center stage -->
+  <rect x="170" y="130" width="860" height="210" rx="4" fill="#050505" opacity=".78" stroke="#1f1f1f"/>
 
-  <!-- tags -->
-  <g font-family="Segoe UI, Ubuntu, sans-serif" font-size="13" font-weight="600">
-    <g transform="translate(56,190)">
-      <rect width="118" height="30" rx="8" fill="#122033" stroke="#1f334f"/>
-      <text x="59" y="20" text-anchor="middle" fill="#2dd4bf">Defensive Sec</text>
-    </g>
-    <g transform="translate(186,190)">
-      <rect width="108" height="30" rx="8" fill="#122033" stroke="#1f334f"/>
-      <text x="54" y="20" text-anchor="middle" fill="#38bdf8">Python / Java</text>
-    </g>
-    <g transform="translate(306,190)">
-      <rect width="92" height="30" rx="8" fill="#122033" stroke="#1f334f"/>
-      <text x="46" y="20" text-anchor="middle" fill="#fbbf24">Viet Nam</text>
-    </g>
+  <!-- accent rules beside name -->
+  <line class="line" x1="220" y1="214" x2="360" y2="214"/>
+  <line class="line" x1="840" y1="214" x2="980" y2="214"/>
+  <circle cx="360" cy="214" r="2" fill="#666"/>
+  <circle cx="840" cy="214" r="2" fill="#666"/>
+
+  <!-- identity -->
+  <text class="name" x="600" y="228" text-anchor="middle" fill="url(#nameGlow)">VAN CHUNG</text>
+  <text class="role" x="600" y="268" text-anchor="middle">CYBER SECURITY  x  AI SYSTEMS</text>
+
+  <!-- dual chips -->
+  <g transform="translate(430, 286)">
+    <rect width="72" height="26" rx="4" fill="#121212" stroke="#3a3a3a"/>
+    <text class="chip" x="36" y="17" text-anchor="middle">CYBER</text>
+  </g>
+  <g transform="translate(520, 286)">
+    <rect width="40" height="26" rx="4" fill="#0c0c0c" stroke="#2a2a2a"/>
+    <text class="chip" x="20" y="17" text-anchor="middle" fill="#888">×</text>
+  </g>
+  <g transform="translate(570, 286)">
+    <rect width="56" height="26" rx="4" fill="#121212" stroke="#3a3a3a"/>
+    <text class="chip" x="28" y="17" text-anchor="middle">AI</text>
+  </g>
+  <g transform="translate(640, 286)">
+    <rect width="130" height="26" rx="4" fill="#0e0e0e" stroke="#2a2a2a"/>
+    <text class="meta" x="65" y="17" text-anchor="middle" fill="#9a9a9a">BUILDER · VN</text>
   </g>
 
-  <!-- terminal cursor block -->
-  <g transform="translate(56,236)" font-family="Consolas, Monaco, monospace" font-size="14">
-    <text fill="#5f7a99">~/portfolio</text>
-    <text x="108" fill="#2dd4bf">$</text>
-    <text x="124" fill="#cfe7ff">building security tools</text>
-    <rect x="318" y="-11" width="9" height="16" fill="#2dd4bf">
-      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
-    </rect>
+  <!-- center telemetry -->
+  <text class="meta" x="600" y="350" text-anchor="middle">[ DEFENSE_TOOLS // RAG_PIPELINES // AGENT_LABS ]</text>
+
+  <!-- scanline -->
+  <rect x="24" y="-40" width="1152" height="40" fill="url(#scan)">
+    <animate attributeName="y" values="24;436" dur="6.5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- bottom telemetry -->
+  <text class="meta" x="48" y="422">FIM_BASELINE: VERIFIED · SOC_SIGNAL: LIVE</text>
+  <text class="meta" x="600" y="422" text-anchor="middle">[ THREAT_VECTOR: MODEL+MESH ]</text>
+  <text class="meta" x="1152" y="422" text-anchor="end">INFERENCE: READY · SHA256: VALID</text>
+
+  <!-- tiny circuit motif left of stage -->
+  <g opacity=".55" stroke="#3f3f3f" fill="none" stroke-width="1">
+    <circle cx="210" cy="180" r="5"/>
+    <circle cx="210" cy="235" r="3"/>
+    <circle cx="210" cy="290" r="5"/>
+    <path d="M210 185 V230 M210 238 V285"/>
+    <path d="M215 180 H245 M215 290 H245"/>
+  </g>
+  <g opacity=".55" stroke="#3f3f3f" fill="none" stroke-width="1">
+    <circle cx="990" cy="180" r="5"/>
+    <circle cx="990" cy="235" r="3"/>
+    <circle cx="990" cy="290" r="5"/>
+    <path d="M990 185 V230 M990 238 V285"/>
+    <path d="M985 180 H955 M985 290 H955"/>
   </g>
 </svg>

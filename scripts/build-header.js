@@ -1,0 +1,211 @@
+import { writeFileSync } from "node:fs";
+
+const glyphs = "01ABCDEF89#*$%=+<>/";
+
+function rainColumn(x, opacity, dur, delay, seed, brightHead = true) {
+  const n = 34;
+  const spans = [];
+  for (let i = 0; i < n; i++) {
+    const c = glyphs[(seed * 13 + i * 7) % glyphs.length];
+    const dy = i === 0 ? 0 : 12;
+    const isHead = brightHead && i < 3;
+    const fill = isHead ? (i === 0 ? "#d0d0d0" : "#8a8a8a") : undefined;
+    const attr = fill ? ` fill="${fill}"` : "";
+    spans.push(`<tspan x="0" dy="${dy}"${attr}>${c}</tspan>`);
+  }
+  return `    <g transform="translate(${x},0)" opacity="${opacity}">
+      <text class="col" y="-240">${spans.join("")}
+        <animate attributeName="y" values="-360;520" dur="${dur}s" begin="${delay}s" repeatCount="indefinite"/>
+      </text>
+    </g>`;
+}
+
+const cols = [
+  [24, 0.55, 13, 0, 1],
+  [64, 0.7, 15.5, 0.8, 2],
+  [104, 0.45, 11, 1.6, 3],
+  [148, 0.8, 14, 0.3, 4],
+  [192, 0.5, 16, 2.1, 5],
+  [240, 0.65, 12.5, 1.1, 6],
+  [292, 0.4, 17, 2.8, 7],
+  [348, 0.75, 13.5, 0.5, 8],
+  [408, 0.5, 15, 1.9, 9],
+  [472, 0.35, 18, 0.2, 10],
+  [540, 0.55, 12, 2.4, 11],
+  [612, 0.7, 14.5, 1.3, 12],
+  [688, 0.45, 16.5, 0.7, 13],
+  [760, 0.8, 11.5, 2.0, 14],
+  [828, 0.5, 15, 1.5, 15],
+  [896, 0.65, 13, 0.4, 16],
+  [960, 0.4, 17.5, 2.6, 17],
+  [1024, 0.75, 12, 1.0, 18],
+  [1088, 0.55, 14, 1.8, 19],
+  [1152, 0.6, 16, 0.6, 20],
+]
+  .map((a) => rainColumn(...a))
+  .join("\n");
+
+const svg = `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460" role="img" aria-label="Van Chung - Cyber x AI">
+  <defs>
+    <style>
+      .col {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 10px;
+        fill: #2a2a2a;
+      }
+      .meta {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 11px;
+        fill: #7a7a7a;
+        letter-spacing: 0.6px;
+      }
+      .meta-hi {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 11px;
+        fill: #bdbdbd;
+        letter-spacing: 0.6px;
+      }
+      .name {
+        font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+        font-size: 82px;
+        font-weight: 800;
+        fill: #f7f7f7;
+        letter-spacing: 10px;
+      }
+      .role {
+        font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        fill: #cfcfcf;
+        letter-spacing: 4.5px;
+      }
+      .chip {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 11px;
+        font-weight: 700;
+        fill: #eaeaea;
+        letter-spacing: 1.5px;
+      }
+      .hud {
+        fill: none;
+        stroke: #3a3a3a;
+        stroke-width: 1.2;
+      }
+      .line {
+        stroke: #2e2e2e;
+        stroke-width: 1;
+      }
+    </style>
+    <radialGradient id="vignette" cx="50%" cy="46%" r="68%">
+      <stop offset="0%" stop-color="#050505" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#050505" stop-opacity=".25"/>
+      <stop offset="100%" stop-color="#000" stop-opacity=".96"/>
+    </radialGradient>
+    <linearGradient id="nameGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#c8c8c8"/>
+    </linearGradient>
+    <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#fff" stop-opacity=".05"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="0.6"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="460" fill="#030303"/>
+
+  <!-- matrix field -->
+  <g>
+${cols}
+  </g>
+
+  <rect width="1200" height="460" fill="url(#vignette)"/>
+
+  <!-- HUD corners -->
+  <path class="hud" d="M28 58 H68 M28 58 V98"/>
+  <path class="hud" d="M1172 58 H1132 M1172 58 V98"/>
+  <path class="hud" d="M28 402 H68 M28 402 V362"/>
+  <path class="hud" d="M1172 402 H1132 M1172 402 V362"/>
+
+  <!-- outer frame -->
+  <rect x="18" y="18" width="1164" height="424" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+  <rect x="24" y="24" width="1152" height="412" fill="none" stroke="#101010" stroke-width="1"/>
+
+  <!-- status bar top -->
+  <g>
+    <circle cx="48" cy="48" r="3.5" fill="#e8e8e8">
+      <animate attributeName="opacity" values="1;0.25;1" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <text class="meta-hi" x="62" y="52">SYS.ONLINE</text>
+    <text class="meta" x="600" y="52" text-anchor="middle">[ NODE: CYBER_AI_CORE // ID: 0xA1C0DE ]</text>
+    <text class="meta" x="1152" y="52" text-anchor="end">LATENCY 12ms</text>
+  </g>
+
+  <!-- center stage -->
+  <rect x="170" y="130" width="860" height="210" rx="4" fill="#050505" opacity=".78" stroke="#1f1f1f"/>
+
+  <!-- accent rules beside name -->
+  <line class="line" x1="220" y1="214" x2="360" y2="214"/>
+  <line class="line" x1="840" y1="214" x2="980" y2="214"/>
+  <circle cx="360" cy="214" r="2" fill="#666"/>
+  <circle cx="840" cy="214" r="2" fill="#666"/>
+
+  <!-- identity -->
+  <text class="name" x="600" y="228" text-anchor="middle" fill="url(#nameGlow)">VAN CHUNG</text>
+  <text class="role" x="600" y="268" text-anchor="middle">CYBER SECURITY  x  AI SYSTEMS</text>
+
+  <!-- dual chips -->
+  <g transform="translate(430, 286)">
+    <rect width="72" height="26" rx="4" fill="#121212" stroke="#3a3a3a"/>
+    <text class="chip" x="36" y="17" text-anchor="middle">CYBER</text>
+  </g>
+  <g transform="translate(520, 286)">
+    <rect width="40" height="26" rx="4" fill="#0c0c0c" stroke="#2a2a2a"/>
+    <text class="chip" x="20" y="17" text-anchor="middle" fill="#888">x</text>
+  </g>
+  <g transform="translate(570, 286)">
+    <rect width="56" height="26" rx="4" fill="#121212" stroke="#3a3a3a"/>
+    <text class="chip" x="28" y="17" text-anchor="middle">AI</text>
+  </g>
+  <g transform="translate(640, 286)">
+    <rect width="130" height="26" rx="4" fill="#0e0e0e" stroke="#2a2a2a"/>
+    <text class="meta" x="65" y="17" text-anchor="middle" fill="#9a9a9a">BUILDER · VN</text>
+  </g>
+
+  <!-- center telemetry -->
+  <text class="meta" x="600" y="350" text-anchor="middle">[ DEFENSE_TOOLS // RAG_PIPELINES // AGENT_LABS ]</text>
+
+  <!-- scanline -->
+  <rect x="24" y="-40" width="1152" height="40" fill="url(#scan)">
+    <animate attributeName="y" values="24;436" dur="6.5s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- bottom telemetry -->
+  <text class="meta" x="48" y="422">FIM_BASELINE: VERIFIED · SOC_SIGNAL: LIVE</text>
+  <text class="meta" x="600" y="422" text-anchor="middle">[ THREAT_VECTOR: MODEL+MESH ]</text>
+  <text class="meta" x="1152" y="422" text-anchor="end">INFERENCE: READY · SHA256: VALID</text>
+
+  <!-- tiny circuit motif left of stage -->
+  <g opacity=".55" stroke="#3f3f3f" fill="none" stroke-width="1">
+    <circle cx="210" cy="180" r="5"/>
+    <circle cx="210" cy="235" r="3"/>
+    <circle cx="210" cy="290" r="5"/>
+    <path d="M210 185 V230 M210 238 V285"/>
+    <path d="M215 180 H245 M215 290 H245"/>
+  </g>
+  <g opacity=".55" stroke="#3f3f3f" fill="none" stroke-width="1">
+    <circle cx="990" cy="180" r="5"/>
+    <circle cx="990" cy="235" r="3"/>
+    <circle cx="990" cy="290" r="5"/>
+    <path d="M990 185 V230 M990 238 V285"/>
+    <path d="M985 180 H955 M985 290 H955"/>
+  </g>
+</svg>
+`;
+
+writeFileSync(new URL("../assets/header.svg", import.meta.url), svg, "utf8");
+console.log("wrote header.svg");

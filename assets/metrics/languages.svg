@@ -2,38 +2,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="260" viewBox="0 0 400 260" role="img" aria-label="Top Languages">
   <defs>
     <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0b1220"/>
-      <stop offset="100%" stop-color="#0a1628"/>
+      <stop offset="0%" stop-color="#050505"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
     </linearGradient>
     <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#2dd4bf"/>
-      <stop offset="100%" stop-color="#38bdf8"/>
+      <stop offset="0%" stop-color="#e8e8e8"/>
+      <stop offset="100%" stop-color="#c0c0c0"/>
     </linearGradient>
     <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
-      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#162033" stroke-width="1"/>
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#141414" stroke-width="1"/>
     </pattern>
     <style>
-      .title { font: 700 16px 'Segoe UI', Ubuntu, Sans-Serif; fill: #e5eefc; }
-      .label { font: 500 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #8b9bb4; }
-      .value { font: 700 22px 'Segoe UI', Ubuntu, Sans-Serif; fill: #e5eefc; }
-      .small { font: 500 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #8b9bb4; }
-      .accent { fill: #2dd4bf; }
+      .title { font: 700 16px 'Segoe UI', Ubuntu, Sans-Serif; fill: #f0f0f0; }
+      .label { font: 500 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #888888; }
+      .value { font: 700 22px 'Segoe UI', Ubuntu, Sans-Serif; fill: #f0f0f0; }
+      .small { font: 500 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #888888; }
+      .accent { fill: #e8e8e8; }
       .pulse { animation: pulse 2.4s ease-in-out infinite; }
       @keyframes pulse { 0%,100% { opacity: .55 } 50% { opacity: 1 } }
       .barGrow { animation: grow .9s ease-out both; }
       @keyframes grow { from { transform: scaleX(0) } to { transform: scaleX(1) } }
     </style>
   </defs>
-  <rect width="400" height="260" rx="14" fill="url(#bgGrad)" stroke="#1f2a3d" stroke-width="1"/>
+  <rect width="400" height="260" rx="14" fill="url(#bgGrad)" stroke="#222222" stroke-width="1"/>
   <rect width="400" height="260" rx="14" fill="url(#grid)" opacity=".35"/>
   <rect x="0" y="0" width="6" height="260" rx="3" fill="url(#accentGrad)"/>
-  <circle cx="382" cy="18" r="4" class="pulse" fill="#2dd4bf"/>
+  <circle cx="382" cy="18" r="4" class="pulse" fill="#e8e8e8"/>
   <text x="22" y="28" class="title">Top Languages</text>
   
       <g transform="translate(22,52)">
         <text x="0" y="12" class="label">TypeScript</text>
         <text x="330" y="12" class="label" text-anchor="end">47%</text>
-        <rect x="0" y="18" width="330" height="8" rx="4" fill="#111827"/>
+        <rect x="0" y="18" width="330" height="8" rx="4" fill="#111111"/>
         <g style="transform-origin: 0px 22px">
           <rect class="barGrow" x="0" y="18" width="250" height="8" rx="4" fill="#3178c6" style="animation-delay:0s"/>
         </g>
@@ -41,7 +41,7 @@
       <g transform="translate(22,86)">
         <text x="0" y="12" class="label">JavaScript</text>
         <text x="330" y="12" class="label" text-anchor="end">27%</text>
-        <rect x="0" y="18" width="330" height="8" rx="4" fill="#111827"/>
+        <rect x="0" y="18" width="330" height="8" rx="4" fill="#111111"/>
         <g style="transform-origin: 0px 22px">
           <rect class="barGrow" x="0" y="18" width="144" height="8" rx="4" fill="#f1e05a" style="animation-delay:0.08s"/>
         </g>
@@ -49,7 +49,7 @@
       <g transform="translate(22,120)">
         <text x="0" y="12" class="label">Python</text>
         <text x="330" y="12" class="label" text-anchor="end">16%</text>
-        <rect x="0" y="18" width="330" height="8" rx="4" fill="#111827"/>
+        <rect x="0" y="18" width="330" height="8" rx="4" fill="#111111"/>
         <g style="transform-origin: 0px 22px">
           <rect class="barGrow" x="0" y="18" width="85" height="8" rx="4" fill="#3572A5" style="animation-delay:0.16s"/>
         </g>
@@ -57,7 +57,7 @@
       <g transform="translate(22,154)">
         <text x="0" y="12" class="label">CSS</text>
         <text x="330" y="12" class="label" text-anchor="end">4%</text>
-        <rect x="0" y="18" width="330" height="8" rx="4" fill="#111827"/>
+        <rect x="0" y="18" width="330" height="8" rx="4" fill="#111111"/>
         <g style="transform-origin: 0px 22px">
           <rect class="barGrow" x="0" y="18" width="21" height="8" rx="4" fill="#563d7c" style="animation-delay:0.24s"/>
         </g>
@@ -65,7 +65,7 @@
       <g transform="translate(22,188)">
         <text x="0" y="12" class="label">HTML</text>
         <text x="330" y="12" class="label" text-anchor="end">4%</text>
-        <rect x="0" y="18" width="330" height="8" rx="4" fill="#111827"/>
+        <rect x="0" y="18" width="330" height="8" rx="4" fill="#111111"/>
         <g style="transform-origin: 0px 22px">
           <rect class="barGrow" x="0" y="18" width="21" height="8" rx="4" fill="#e34c26" style="animation-delay:0.32s"/>
         </g>
@@ -73,9 +73,9 @@
       <g transform="translate(22,222)">
         <text x="0" y="12" class="label">PLpgSQL</text>
         <text x="330" y="12" class="label" text-anchor="end">2%</text>
-        <rect x="0" y="18" width="330" height="8" rx="4" fill="#111827"/>
+        <rect x="0" y="18" width="330" height="8" rx="4" fill="#111111"/>
         <g style="transform-origin: 0px 22px">
-          <rect class="barGrow" x="0" y="18" width="11" height="8" rx="4" fill="#2dd4bf" style="animation-delay:0.4s"/>
+          <rect class="barGrow" x="0" y="18" width="11" height="8" rx="4" fill="#e8e8e8" style="animation-delay:0.4s"/>
         </g>
       </g>
 </svg>
