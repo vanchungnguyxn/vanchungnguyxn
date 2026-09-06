@@ -111,8 +111,8 @@
 
 <div align="center">
   <h3>✦ Metrics</h3>
-  <img height="180" src="https://github-readme-stats.vercel.app/api?username=vanchungnguyxn&show_icons=true&theme=dark&hide_border=true&bg_color=030303&title_color=e8e8e8&icon_color=c8c8c8&text_color=a0a0a0&ring_color=e8e8e8" alt="GitHub stats"/>
-  <img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=vanchungnguyxn&layout=compact&theme=dark&hide_border=true&bg_color=030303&title_color=e8e8e8&text_color=a0a0a0" alt="Top languages"/>
+  <img height="180" src="https://github-readme-stats.anuraghazra1.vercel.app/api?username=vanchungnguyxn&show_icons=true&theme=dark&hide_border=true&bg_color=030303&title_color=e8e8e8&icon_color=c8c8c8&text_color=a0a0a0&ring_color=e8e8e8" alt="GitHub stats"/>
+  <img height="180" src="https://github-readme-stats.anuraghazra1.vercel.app/api/top-langs/?username=vanchungnguyxn&layout=compact&theme=dark&hide_border=true&bg_color=030303&title_color=e8e8e8&text_color=a0a0a0" alt="Top languages"/>
   <br/>
   <img height="160" src="https://streak-stats.demolab.com?user=vanchungnguyxn&theme=dark&hide_border=true&background=030303&ring=e8e8e8&fire=c8c8c8&currStreakLabel=e8e8e8" alt="GitHub streak"/>
 </div>
@@ -140,7 +140,7 @@
 
 <div align="center">
   <h3>✦ Contributions</h3>
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=vanchungnguyxn&bg_color=030303&color=a0a0a0&line=e8e8e8&point=c8c8c8&area=true&hide_border=true" width="100%" alt="Contribution activity graph"/>
+  <img src="https://ghchart.rshah.org/vanchungnguyxn" width="100%" alt="GitHub contribution chart"/>
 </div>
 
 <br/>
