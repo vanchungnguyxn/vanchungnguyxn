@@ -121,19 +121,10 @@
 
 <div align="center">
   <h3>✦ Stack</h3>
-  <p>
-    <img src="https://img.shields.io/badge/Python-111111?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-    <img src="https://img.shields.io/badge/Java-111111?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java"/>
-    <img src="https://img.shields.io/badge/TypeScript-111111?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
-    <img src="https://img.shields.io/badge/Docker-111111?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
-    <img src="https://img.shields.io/badge/Kubernetes-111111?style=for-the-badge&logo=kubernetes&logoColor=white" alt="Kubernetes"/>
-    <img src="https://img.shields.io/badge/Linux-111111?style=for-the-badge&logo=linux&logoColor=white" alt="Linux"/>
-  </p>
-  <p>
-    <code>Cyber</code> blue-team · FIM · packet capture
-    &nbsp;·&nbsp;
-    <code>AI</code> RAG · agents · prompt / tool-calling · SAST+LLM
-  </p>
+  <img src="https://skillicons.dev/icons?i=python,java,js,ts,nodejs,docker,kubernetes,linux,bash,git,githubactions,vscode&theme=dark&perline=6" alt="Tech stack"/>
+  <br/><br/>
+  <img src="https://img.shields.io/badge/Cyber-Blue%20Team%20%7C%20FIM%20%7C%20Packet%20Capture-111111?style=flat-square&logo=shieldsdotio&logoColor=white" alt="Cyber"/>
+  <img src="https://img.shields.io/badge/AI-RAG%20%7C%20Agents%20%7C%20SAST%2BLLM-111111?style=flat-square&logo=openai&logoColor=white" alt="AI"/>
 </div>
 
 <br/>
